@@ -1,0 +1,66 @@
+Update 1 : 
+Remade 'Remove Bloatware' code part! Now script loads Bloatware Packages list from text file located in bin folder.
+Removed Registry Tweaks for Immersive Control Panel.
+Removed some Bloatware modifications.
+Remvoed Legacy Volume Control + Notifications Tweaks (they dont work on Windows 11)
+Added Scheduled Tasks text file, script will load tasks from there and disable them
+Made changes to Small Taskbar code (Small Taskbar Registry hack on Windows 11 is buggy)
+Added custom function to restart Windows Explorer
+Made tweaks to Disable/Enable Windows Update code
+Removed "Disable AutoPlay" and "Disable Remote Desktop" code
+Removed "Wifi Sense" and "Disable Hibernation" code
+UAC wont be disabled now via script
+Made tweaks to 'Disable Windows Defender' script. Defender should not re-enable itself now!
+
+Update 2 : 
+Fixed up some errors
+Removed HomeGroup Services
+Made some changes to services, had some errors while trying to disable them
+Fixed O&OSHUTUP10 Config Link
+
+Update 3 : 
+Added "ELSE" condition to scheduled tasks code part
+Added 'scheduledtasks_list.txt', from last upload it didn't upload these files for some reason. Should be 
+fixed now
+Added "ELSE" condition to remove bloatware code part
+Remade all of the restore scripts
+Added all required modules + lists
+
+Update 4 : 
+Added "NSudo" into debloater's folder again so "disablewindowsdefender.ps1" should work now
+
+Update 5 :
+Changed some stuff with bloatware list. Commented out [Windows Store, Windows Store Purchase, Gaming Apps, Account Control, Runtimes, Desktop App Installer]
+Temporarily disabled O&OSHUTUP Part (Will be enabled later on. Have to remake config)
+Commented out some code that prevented the user to install & download updates
+Commented out code part where script disabled Windows Firewall & Windows Defender via Registry
+
+Update 6 :
+Commented out "Enable-ScheduledTask -TaskName "\Microsoft\Windows\WaaSMedic\PerformRemediation" | Out-Null" because enabling this task requires special premissions.
+Commented out "Disable-ScheduledTask -TaskName "\Microsoft\Windows\WaaSMedic\PerformRemediation" | Out-Null" because disabling this task requires special premissions.
+Tweaked Light & Dark Mode code abit
+Tweaked OneDrive Code abit
+Added custom cmdlet to test if Registry keys exist
+Replaced "Small Taskbar Button" with "Toggle Small Taskbar" button
+Added "otherScripts" folder. Read more from text file located there
+Temporarily removed o&oshutup10 config file
+
+Commented out some scheduled tasks from the list :
+----------------------------------------------------------------------
+[ \Microsoft\Windows\LicenseManager\TempSignedLicenseExchange        ]
+[ \Microsoft\Windows\Subscription\EnableLicenseAcquisition           ]
+[ \Microsoft\Windows\Subscription\LicenseAcquisition                 ]
+[ \Microsoft\Windows\UpdateOrchestrator\Reportpolicies               ]
+[ \Microsoft\Windows\UpdateOrchestrator\ScheduleMaintenanceWork      ]
+[ \Microsoft\Windows\UpdateOrchestrator\ScheduleScan                 ]
+[ \Microsoft\Windows\UpdateOrchestrator\ScheduleScanStaticTask       ]
+[ \Microsoft\Windows\UpdateOrchestrator\ScheduleWakeToWork           ]
+[ \Microsoft\Windows\UpdateOrchestrator\ScheduleWork                 ]
+[ \Microsoft\Windows\UpdateOrchestrator\StartOobeExpediteWork        ]
+[ \Microsoft\Windows\UpdateOrchestrator\StartOobeAppsScan            ]
+[ \Microsoft\Windows\UpdateOrchestrator\StartOobeAppsScanAfterUpdate ]
+[ \Microsoft\Windows\UpdateOrchestrator\UpdateModelTask              ]
+[ \Microsoft\Windows\UpdateOrchestrator\USO_UxBroker                 ]
+[ \Microsoft\Windows\UpdateOrchestrator\UUSFailoverTask              ]
+[ \Microsoft\Windows\UPnP\UPnPHostConfig                             ]
+----------------------------------------------------------------------
